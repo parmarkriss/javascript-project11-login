@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Register form</title>
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" href="./style.css" />
+  <body>
+    <div class="container">
+      <div class="form p-5">
+        <h2 class="text-center" style="color: rgb(255, 255, 255)">
+          Register form
+        </h2>
+        <table>
+          <tr>
+            <div class="mb-3">
+              <label
+                for="exampleInputEmail1"
+                class="form-label"
+                style="color: white"
+                >Name:-
+              </label>
+              <input type="text" class="form-control" id="name"
+                aria-describedby="emailHelp"
+                placeholder="Enter the name"
+              />
+            </div>
+          </tr>
+          <tr>
+            <div class="mb-3">
+              <label
+                for="exampleInputEmail1"
+                class="form-label"
+                style="color: white"
+                >Email:-
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+                placeholder="Example@gmail.com"
+              />
+            </div>
+          </tr>
+          <tr>
+            <div class="mb-3">
+              <label
+                for="exampleInputEmail1"
+                class="form-label"
+                style="color: white"
+                >Password:-
+              </label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                aria-describedby="emailHelp"
+                placeholder="Enter the password"
+              />
+            </div>
+          </tr>
+          <tr>
+            <div class="mb-3">
+              <label
+                for="exampleInputEmail1"
+                class="form-label"
+                style="color: white"
+                >Confirm Password:-
+              </label>
+              <input
+                type="password"
+                class="form-control"
+                id="cpassword"
+                aria-describedby="emailHelp"
+                placeholder="Enter the confirm password"
+              />
+            </div>
+          </tr>
+          <tr>
+            <div class="text-center">
+              <input
+                class="btn"
+                type="submit"
+                value="Submit"
+                style="background-color: white"
+                onclick="save()"
+              />
+            </div>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="./register.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

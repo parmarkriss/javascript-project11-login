@@ -1,0 +1,244 @@
+body{
+    background-color: #303030;
+}
+.bg-darkblue{
+    background-color: #E91D63;
+}
+.bg-black{
+    background-color: #1F1F1F;
+}
+.bg-lightblack{
+    background-color: #2d2d2d!important;
+}
+.bg-black1{
+    background-color: #2d2d2dcf!important;
+}
+.z-index{
+    z-index: 1;
+}
+.button-darkblue{
+    background-color: #222B45!important;
+}
+.span-color{
+    color: #00D68F;
+}
+.span-color1{
+    color: #FF3D71;
+}
+.selected{
+    border: none!important;
+}
+.progess-bar{
+    width: 11px;
+    height: 9px;
+    background-color: #0a0c0f;
+}
+.progess-bar1{
+    width: 11px;
+    height: 15px;
+    background-color: #00D68F;
+}
+.border1{
+    border-bottom: 1px solid #151A30!important;
+}
+.btn-darkblue{
+    background-color: #E91D63;
+}
+.text-color{
+    color: #8F9BB3;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    box-shadow:  0 .5rem 1rem 0 #0b0c14;
+}
+.accordion-button{
+    box-shadow: none !important;
+}
+.accordion-button:hover {
+    background-color: #222B45;
+}
+.accordion-button:not(.collapsed){
+    background-color: #222B45;
+}
+.accordion-button::after{
+    color: white!important;
+}
+.main-title h1{
+    color: white;
+    text-align: center;
+}
+.scrollbar{
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: scroll;
+}
+.scrollbar1{
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.scrollbar2{
+    width: 100%;
+    height: 465px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: #1c2237;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #0a0c0f;
+    height: 50px;
+    border-radius: 10px;
+}
+.ctn ul li{
+    padding-right: 5px!important;
+}
+.nd-card .box1{
+    width: 100%;
+    height: 100px;
+    background-color: #222B45;
+}
+.box-user{
+    width: 300px;
+    height: 150px;
+    background-color: #1F1F1F;
+}
+a .box-user:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.scrollbar button{
+    width: 100px;
+    height: 35px;
+    margin-left: 25%;
+}
+.box1 .sub-box{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #3366FF;
+}
+.box1 button{
+    background-color: #FF5B81;
+}
+.area .card-area{
+    width: 100%;
+    height: 370px;
+    background-color: #282828;
+}
+.nd-list-item{
+    padding: 10px;
+}
+.nd-card-header{
+    width: 100%;
+    height: 55px;
+    margin-top: 70px;
+    background-color: #222B45;
+    padding: 10px;
+    top: 0;
+}
+.nd-card-header1{
+    width: 100%;
+    height: 55px;
+    background-color: #222B45;
+    padding: 15px;
+}
+.items{
+    width: 100%;
+    height: 300px;
+    background-color: #222B45;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+.ecommerce-chart{
+    width: 100%;
+    height: 100%;
+    background-color: #282828;
+}
+.summary-container{
+    background-color: #1F1F1F;
+    padding: 24px 55px;
+}
+text.apexcharts-text{
+    fill: white;
+}
+.apexcharts-toolbar{
+    display: none!important;
+}
+.apexcharts-legend-text{
+    color: white!important;
+    font-size: 15px!important;
+}
+.order-chart{
+    padding: 16px 23px;
+    background-color: #222B45;
+}
+.map-chart span{
+    font-size: 12px;
+}
+.apexcharts-text{
+    font-size: 16px!important;
+}
+.nd-card-headers{
+    padding: 22px 16px;
+    width: 100%;
+}
+.nd-body{
+    width: 100%;
+    height: 100%;
+    background-color: #222B45;
+    padding: 25px;
+}
+.progressbar{
+    width: 100%;
+    background-color: #192038;
+    height: 25px;
+}
+.progress-value, .progress-value1, .progress-value2{
+    width: 70%;
+    background-color:#0a0c0f;
+    height: 25px;
+}
+.progress-value1{
+    width: 30%;
+}
+.progress-value2{
+    width: 55%;
+}
+.nd-body p{
+    font-size: 12px;
+}
+.slider-out{
+    background-color: #2d2d2dcf;
+    box-shadow:  0 4px 14px 0 #8f9bb30f;
+    padding: 20px;
+    width: 350px;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+footer{
+    padding: 20px;
+    background-color: #242424;
+}
+a{
+    color: #598BFF;
+    font-weight: 700;
+}
+footer .icons a i:hover{
+    color: white;
+}
+.item .nd-list-item span{
+    font-size: 12px;
+}

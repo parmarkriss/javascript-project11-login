@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link rel="stylesheet" href="./style1.css">
+<link rel="stylesheet" href="./all.min.css">
+
+<body>
+    <header class="position-sticky top-0 z-index">
+        <nav class="navbar navbar-expand-lg navbar-light bg-darkblue">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="col-4 d-flex align-items-center nav-text ">
+                        <a href="#" class="border-end ps-3 border-primary"><i
+                                class="bi bi-list text-light fs-4 pe-3"></i></a>
+
+                        <a class="navbar-brand text-white px-3 fs-2" href="#">ngx-admin</a>
+
+                        <select class="selected border border-2 rounded-2 border-primary btn-darkblue text-light p-1">
+                            <option class="text-light">Material Dark</option>
+                            <option class="text-light">Light</option>
+                            <option class="text-light">Cosmic</option>
+                            <option class="text-light">Corporate</option>
+                            <option class="text-light">Material Light</option>
+                            <option class="text-light">Material dark</option>
+                        </select>
+                    </div>
+
+                    <div class="col-8 d-flex justify-content-end align-items-center">
+                        <ul class="navbar-nav d-flex align-items-center">
+                            <li class="nav-item"><a class="nav-link active text-white" href="#">Support us:</a></li>
+                            <li> <button class="btn bg-white p-0 px-2"><i class="bi bi-github"></i>star</button></li>
+                            <li class="pe-3"> <button class="btn bg-white p-0 px-1 ms-2">24,374</button></li>
+                            <li class="text-white px-3 border-left"><i
+                                    class="bi bi-download text-white pe-3"></i>470.000</li>
+                            <li class="px-3 border-left"> <button
+                                    class="btn text-white-50 text-uppercase p-0 px-1 ms-1"><i
+                                        class="bi bi-envelope px-1"></i> contact@akveo.com </button></li>
+                            <li class="text-white px-3 border-left"><i class="bi bi-search"></i></li>
+                            <li class="text-white px-3 border-left"><i class="bi bi-envelope px-1"></i></li>
+                            <li class="text-white px-3 border-left"><i class="bi bi-bell-fill"></i></li>
+                            <li class="text-white px-3 border-left"><img src="../img/nick.webp"
+                                    class="rounded-circle me-1" width="40" alt="">
+                                Nick Jones </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 p-0">
+                    <div class="scrollbar bg-black">
+                        <ul class="p-0">
+                            <li class="ps-3  py-3 ps-4 border1"><a href="dashboard.html" class="text-white"><i
+                                        class="fa-solid fa-gauge me-2 fs-4"></i>dashboard</a></li>
+                            <li class="ps-3  py-3 ps-4 border1"><a href="user.html" class="text-white "><i
+                                        class="fa-solid fa-users me-2 fs-4"></i>Admin/User</a></li>
+                        </ul>
+                        <button onclick="logout()"> Logout </button>
+                    </div>
+                </div>
+
+
+                <div class="col-10 p-3">
+
+                    <div class="main-title">
+                        <h1>Admin / User</h1>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <table class="table table-success table-striped mt-3">
+                                <tr>
+                                    <td>Userid</td>
+                                    <td>Name</td>
+                                    <td>Email</td>
+                                    <td>Password</td>
+                                    <td>Role</td>
+                                </tr>
+
+                                <tbody id="record">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+
+
+    <script src="./bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+       const logout = () =>{
+            localStorage.removeItem('checkUserLogin');
+            window.location.href = "index.html";
+        }
+
+        const viewUser = () => {
+            let chekUser = JSON.parse(localStorage.getItem('checkUserLogin'));
+            let allUser = JSON.parse(localStorage.getItem('register'));
+            if (chekUser.role === "admin") {
+                let tbl = "";
+                allUser.map((val) => {
+                    tbl += `
+                                    <tr>
+                                        <td>${val.userid}</td>
+                                        <td>${val.name}</td>
+                                        <td>${val.email}</td>
+                                        <td>${val.password}</td>`
+
+                    if (val.role == "admin") {
+                        tbl += `     <td>
+                                                <button onclick='adminBtn(${val.userid})' style='background : gray;color: white'>Admin</button>
+                                            </td>`
+                    } else {
+                        tbl += `     <td>
+                                                <button onclick='userBtn(${val.userid})' style='background : red;color: white'>User</button>
+                                            </td>`
+                    }
+
+                    tbl += `                
+                                    </tr>
+                                `
+
+
+                })
+                document.getElementById('record').innerHTML = tbl;
+            } else {
+                let tbl = "";
+                tbl += `
+                                    <tr>
+                                        <td>${chekUser.userid}</td>
+                                        <td>${chekUser.name}</td>
+                                        <td>${chekUser.email}</td>
+                                        <td>${chekUser.password}</td>
+                                        <td>${chekUser.role}</td>
+                                    </tr>
+                                `
+                document.getElementById('record').innerHTML = tbl;
+            }
+        }
+        viewUser();
+
+
+        const userBtn = (id) => {
+            let allUser = JSON.parse(localStorage.getItem('register'));
+
+            allUser.filter((val) => {
+                if (val.userid == id) {
+                    val.role = "admin";
+                }
+                return val;
+            });
+            localStorage.setItem('register', JSON.stringify(allUser));
+            alert("Role successfully changed!!");
+            viewUser();
+        }
+
+        const adminBtn = (id) => {
+            let allUser = JSON.parse(localStorage.getItem('register'));
+            allUser.filter((val) => {
+                if (val.userid == id) {
+                    val.role = "user";
+                }
+                return val;
+            });
+            localStorage.setItem('register', JSON.stringify(allUser));
+            alert("Role successfully changed!!");
+            viewUser();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+body,body{
+    background-image: url("img/Login_bg.jpg");
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+}
+.form{
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:rgba(0, 0, 0, 0.849);
+}
+
+.btn{
+    width: 100%!important;
+    margin-top: 10px;
+    background-color: blue!important;
+    color: white!important;
+}
+.btn:hover{
+    background-color: darkred!important;
+    color: white;
+}
+
+
+.loginform{
+    width: 450px;
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:rgba(0, 0, 0, 0.849);
+}
+.loginform h2{
+    color: white!important;
+}
+
+
